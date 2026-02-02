@@ -1,75 +1,51 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-=======
 # WebSLT-Frontend
+
+WebSLT-Frontend is a real-time Sign Language Translation application built with modern web technologies. This project serves as the frontend client, capturing video input, processing gestures (using MediaPipe), and communicating with the translation backend.
+
+## 🚀 Features
+
+- **Real-time Hand Tracking**: Utilizes Google's MediaPipe Hands for accurate and fast hand landmark detection directly in the browser.
+- **Instant Translation**: Converts sign language gestures into text/speech (backend integration).
+- **Modern UI**: Built with React and TypeScript for a robust and responsive user experience.
+- **Fast Development**: Powered by Vite for lightning-fast HMR and building.
+
+## 🛠️ Tech Stack
+
+- **Framework**: [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- **Build Tool**: [Vite](https://vitejs.dev/)
+- **ML/AI**: [MediaPipe Hands](https://developers.google.com/mediapipe/solutions/vision/hand_landmarker), [TensorFlow.js](https://www.tensorflow.org/js)
+- **HTTP Client**: [Axios](https://axios-http.com/)
+- **Notifications**: [React Toastify](https://fkhadra.github.io/react-toastify/)
+
+## 📦 Installation
+
+Prerequisites: Node.js (v18+ recommended) and npm/yarn/pnpm.
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/steveappeltantsPXL/WebSLT-Frontend.git
+   cd WebSLT-Frontend
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
+   Open your browser at `http://localhost:5173`.
+
+## 🤝 Contributing
+
+We welcome contributions! Please see [CONTRIBUTING.md](.github/CONTRIBUTING.md) for details on how to get started, our code of conduct, and the Developer Certificate of Origin (DCO).
+
+## 📄 License
+
+This project is licensed under the **GNU Affero General Public License v3.0 (AGPL-3.0)**. See the [LICENSE](LICENSE) file for details.
+
+## 📝 Issue Tracking
+
+Found a bug? Have a feature request? Please use our [Issue Tracker](https://github.com/steveappeltantsPXL/WebSLT-Frontend/issues) using the provided templates.
